@@ -3,5 +3,6 @@ var repository = [ {name: 'Beedrill', height: 1.0, types: ['swarm', 'sniper'] },
     {name: 'Fearow', height: 1.2, types: ['keen-eye', 'sniper'] },
     {name: 'Pickachu', height: 0.4, types: ['lightningrod', 'static'] } ];
 
-    repository.forEach({name, height, types}) 
-    console.log(name, height, types);
+    repository.forEach(function(arrayElement){
+        return console.log(arrayElement);
+        });
