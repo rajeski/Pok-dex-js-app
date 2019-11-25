@@ -24,10 +24,10 @@ var pokemonRepository = (function () {
      
         function showDetails(pokemon) {
           console.log(pokemon);
-        
+        }
           function getAll() {
             return repository;
-          }
+        }
           return {
             addListItem: addListItem, 
             getAll: getAll
