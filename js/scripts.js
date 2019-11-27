@@ -1,4 +1,4 @@
-var pokemonRepository = (() => {
+var pokemonRepository = (function () {
   var repository = [];
   var apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
 
@@ -35,9 +35,15 @@ var pokemonRepository = (() => {
 
   function addListItem(pokemon) {
     var $pokemonList = document.querySelector("ul");
-    var pokemonRepository = (function () {
-  });
-}
+    var $listItem = document.createElement("li");
+    var $button = document.createElement("button");
+
+    $button.innerText = pokemon.name;
+    $button.classList.add("list-button");
+    $pokemonList.appendChild($listItem);
+    $listItem.appendChild($button)
+    addListener($button, pokemon);
+  }
 
 function showDetails(item) {
   pokemonRepository.loadDetails(item)
