@@ -45,6 +45,12 @@ var pokemonRepository = (function () {
     addListener($button, pokemon);
   }
 
+  function addListener(button, pokemon) {
+    button.addEventListener("click", () => {
+      showDetails(pokemon);
+    });
+  }
+
 function showDetails(item) {
   pokemonRepository.loadDetails(item)
     .then(() => {
